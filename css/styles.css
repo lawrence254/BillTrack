@@ -1,0 +1,36 @@
+.topnav {
+  background-color: #224969;
+  padding: 14px 16px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.topnav p {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-right: 40px;
+  font-size: 21px;
+  color: #FFFFFF;
+}
+
+.topnav a {
+  float: right;
+  margin-right: 70px;
+  margin-top: 7px;
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.container-fluid {
+  background-image: url('../img/Parliament 3.jpg');
+  height: 700px;
+  margin: 0px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 300px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
