@@ -342,19 +342,47 @@ footer.footer-distributed {
   }
 }
 /* upload */
-.describe{
-  height:250px;
-  width:300px
+textarea{
+  height: 500px;
+  width: 700px;
+  margin-left: 0%;
+  border-radius: 20px;
+  border: 0;
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
 }
-.box{
+textarea:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+label{
+  text-align:left;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #1a70ad;
+  width: 150px;
+  margin-right: 5px;
+  padding: 4px;
+  float: left;
+}
+input{
+  align-items: right;
+  padding: 5px;
+
+}
+/* /.box{
   width: 320px;
      padding: 10px;
      border:0;
      margin: 0;
      background-color:  #1a70ad;
-}
+} */
 .upload{
   background-color:  #1a70ad;
+  text-align: center;
+  border-radius: 10px;
+  padding: 6px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
 }
 #h{
 background-color:  #1a70ad;
