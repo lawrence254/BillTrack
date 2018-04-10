@@ -24,6 +24,8 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
 
     <script src="js/scripts.js" charset="utf-8"></script>
 
+    <script src="js/scripts2.js" charset="utf-8"></script>
+
     <title>Current Bills</title>
 
   </head>
@@ -38,21 +40,36 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
 
       <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
 
-      <a href="#mainpage" class="active"> Main Page</a>
+      <a href="index.html" class="active"> Main Page</a>
 
-      <a href="#currentBills">Current Bills</a>
+      <a href="current-bills.html">Current Bills</a>
 
-      <a href="#archives">Archives</a>
+      <a href="Archives.html">Archives</a>
 
-      <a href="#search">Search</a>
+      <a href="#search" id="search">Search</a>
 
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
     </div>
 
+     <!-- Search Bar -->
+
+    <div class="search">
+
+      <h2 class="text-center" style="padding-bottom:  2%;padding-top:  2%;"><em>Search for a Current Bill</em></h2>
+
+      <input type="text">
+
+      <button type="button" >Search</button>
+
+    </div>
+
+
     <h2 class="text-center">Current Bills in Parliament</h2>
 
-    <p class="text-center">These are the current Bills in Parliament</p>
+    <p class="text-center">These are the ongoing Bills in Parliament</p>
+
+
 
     <!-- Cards -->
 
@@ -83,6 +100,8 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
       </div>
 
     </div>
+
+
 
     <!-- Footer Section -->
 

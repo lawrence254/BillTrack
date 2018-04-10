@@ -279,3 +279,37 @@ footer.footer-distributed {
 .bill:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+/* Styling for the search bar  */
+.search{
+  display: none;
+}
+.search{
+  text-align: center;
+  background-color: #1a70ad;
+  height: auto;
+  color: white;
+}
+.search input{
+  margin: 3%;
+  border-radius: 20px;
+  width: 200px;
+  border: 0;
+  height: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.search button{
+  border-radius: 10px;
+  color: white;
+  border: 0;
+  width: 150px;
+  background-color: #224969;
+}
+.search button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+p {
+  font-family: 'Cormorant Garamond', serif;
+}
+h2, h4, h1{
+  font-family: 'Crimson Text', serif;
+}
