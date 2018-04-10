@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 .topnav {
   background-color: #224969;
   padding: 14px 16px;
@@ -344,4 +341,9 @@ footer.footer-distributed {
     float: none;
   }
 }
->>>>>>> f61230066773a55b143004a25cdd5a6a830dd27d
+.up{
+  border-radius:15px;
+  paddding:15px;
+  width: 5px;
+  height:100px;
+}
