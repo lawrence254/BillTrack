@@ -47,6 +47,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
       <div class="row">
         <?php while( $record = mysqli_fetch_assoc($resultset) ) {
           $loadID = $record['id'];
+
     $fileLink = $record['file'];
     echo "<div class='col-md-4 col-sm-6'>";
     echo "<div class='card'>";
@@ -55,6 +56,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     echo "<h4 class='card-title'>".$record['proposer'];"</h4>";
     echo "<p class='card-text'>".$record['description'];"</p>";
     // echo "<p class='card-text'>".$record['proposed_date'];"</p>";
+
     // $link = "download.php?filename=".$fileLink;
     $linked = "billname.php?id=".$loadID;
     echo "</div>";
@@ -67,7 +69,6 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     ?>
     <?php } ?>
     </div>
-
     <button type="View" class="btn">View More</button>
   </div>
   <footer class="footer-distributed">

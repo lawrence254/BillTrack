@@ -6,9 +6,10 @@ $db = 'bills';
 $user = 'team';
 $pass = 't5TQlrN3B39ufxGv';
 $conn = new mysqli ($host,$user,$pass,$db);
-$sql = "SELECT description, proposer, proposed_date, maturity_date, file FROM bill WHERE id={$searchID} LIMIT 1";
+$sql = "SELECT title,description, proposer, proposed_date, maturity_date, file FROM bill WHERE id={$searchID} LIMIT 1";
 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 $billDetails = mysqli_fetch_assoc($resultset);
+$fileLink = $billDetails['file'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +42,9 @@ $billDetails = mysqli_fetch_assoc($resultset);
     <h4>Bill Description</h4>
     <p><?php echo $billDetails['description']; ?></p>
 
-    <button type="submit" class="btn btn-success pull-right" name="download">Download PDF</button>
+
+    <?php $link = "download.php?filename=".$fileLink; echo "<a class='btn btn-success'href='".$link."'>Download This Bill</a>" ?>;
+
   </div>
   <!-- </div> -->
   <footer class="footer-distributed">
