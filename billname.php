@@ -1,3 +1,15 @@
+<?php
+// include_once("config/db_Connect.php");
+$searchID=$_GET['id'];
+$host = 'localhost';
+$db = 'bills';
+$user = 'team';
+$pass = 't5TQlrN3B39ufxGv';
+$conn = new mysqli ($host,$user,$pass,$db);
+$sql = "SELECT description, proposer, proposed_date, maturity_date, file FROM bill WHERE id={$searchID} LIMIT 1";
+$resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+$billDetails = mysqli_fetch_assoc($resultset);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +22,6 @@
 
 <body>
   <div class="topnav">
-
     <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
     <a href="#mainpage" class="active"> Main Page</a>
     <a href="#currentBills">Current Bills</a>
@@ -20,18 +31,17 @@
 
   </div>
   <!-- <div class="container"> -->
-  <div class="card">
-    <h3>Bill Name</h3>
+  <div class="card cardDetail">
     <img src="img/bill-tracker.jpg" alt="Vector1" width="300px" height="300px">
-    <h6>proposer</h6>
-    <h6>Date of Proposal</h6>
-    <h6>Maturity Date of poprosal</h6>
+    <h3>BILL NAME:<?php echo $billDetails['title']; ?></h3>
+    <h5>Bill Proposed By: <?php echo $billDetails['proposer']; ?></h5>
+    <h5>Bill Proposed On: <?php echo $billDetails['proposed_date']; ?></h5>
+    <h5>Bill Will Mature On: <?php echo $billDetails['maturity_date']; ?></h5>
 
     <h4>Bill Description</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p><?php echo $billDetails['description']; ?></p>
 
-    <button type="submit" class="btn btn-info pull-right" name="download">Download PDF</button>
+    <button type="submit" class="btn btn-success pull-right" name="download">Download PDF</button>
   </div>
   <!-- </div> -->
   <footer class="footer-distributed">
