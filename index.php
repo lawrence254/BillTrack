@@ -60,7 +60,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     echo "</div>";
     echo "<div class='card-footer text-muted'>Proposed on: ".$record['proposed_date'];
     // echo "<a class='btn btn-info'href='".$link."'>View Bill</a>";
-     echo "<a class='btn btn-info'href='".$linked."'>View Bill</a>";
+     echo "<a class='btn btn-success'href='".$linked."'>View Bill</a>";
     echo "  </div>";
     echo "</div>";
     echo "</div>";
