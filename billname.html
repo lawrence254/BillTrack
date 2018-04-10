@@ -1,3 +1,14 @@
+<?php
+// include_once("config/db_Connect.php");
+$searchID=$_GET['id'];
+$host = 'localhost';
+$db = 'bills';
+$user = 'team';
+$pass = 't5TQlrN3B39ufxGv';
+$conn = new mysqli ($host,$user,$pass,$db);
+$sql = "SELECT description, proposer, proposed_date, maturity_date, file FROM bill WHERE id=}{$searchID}";
+$resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+?>
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +31,7 @@
 
   </div>
   <!-- <div class="container"> -->
-  <div class="card">
+  <div class="card cardDetail">
     <h3>Bill Name</h3>
     <img src="img/bill-tracker.jpg" alt="Vector1" width="300px" height="300px">
     <h6>proposer</h6>
