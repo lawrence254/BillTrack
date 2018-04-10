@@ -59,6 +59,9 @@
 
 .container-fluid {
   background-image: url('../img/Parliament 3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 700px;
   margin: 0px;
   text-align: center;
