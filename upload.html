@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-  <link type="text/css" rel="stylesheet" href="css/styles.css">
+  <link type="text/css" rel="stylesheet" href="cs/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="cs/style.css">
   <meta charset="utf-8">
   <title>upload</title>
 </head>
@@ -18,19 +18,28 @@
     <a href="#currentBills">Current Bills</a>
 </div>
 <div class="container">
+  <div class="center">
   <h1>Upload</h1>
-  <h2>Upload A File</h2>
-    <button class="btn btn-info" >upload a file</button><br>
-<div class="head">
-    <P>Enter a Description for the proposed bill<P><br>
-    <input type="text" id="text" ><br>
-<P class="up">Proposer of the bill</p>
+  <h2 >Upload A File</h2>
+    <button class="btn btn-info" id="h" >upload a file</button>
 </div>
-    <input type="text" ><br>
-    <p>Proposed Date</p>
-    <input type="text" class="up"><br>
-    <p >Maturity Date</p>
-    <input type="text"class="up" ><br>
+    <P>Enter a Description for the proposed bill<P><br>
+
+      <textarea name="describe" placeholder="Description" class="describe"></textarea>
+<p class="box">
+  Proposer of the bill
+</p>
+<input type="text" class="text">
+<p class="box">
+  Proposed Date
+</p>
+<input type="text" class="text">
+<p class="box">
+  Maturity date
+</p>
+<input type="text" class="text">
+<hr>
+
 
     <button type="submit"  class="upload">Submit</button>
 
