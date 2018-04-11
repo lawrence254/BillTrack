@@ -1,12 +1,12 @@
 <?php
-if(isset($_FILES['fileUpload'])){
-
+if(isset($_POST['describe'])){
+  if (isset($_FILES['fileUpload'])) {
 $file = $_FILES['fileUpload'];
-$title = $_POST['title'];
-$proposer = $_POST['proposer'];
-$desc = $_POST['description'];
-$prop_date = $_POST['prop_date'];
-$mat_date = $_POST['mat_date'];
+$title = trim($_POST['title']);
+$proposer = trim($_POST['proposer']);
+$desc =trim($_POST['describe']);
+$prop_date = trim($_POST['prop_date']);
+$mat_date = trim($_POST['mat_date']);
 
 $uuid = uniqid('Bill_',TRUE);
 
@@ -39,17 +39,23 @@ if($locate){
 // mysqli_select_db("upload");
 // echo"Your File Successfully Uploaded";
 
-$ins = mysqli_query($conn,"INSERT INTO bill(uuid,title,description,proposer,proposed_date,maturity_date,file) VALUES ('$uuid','$title','$desc','$proposer','$prop_date','$mat_date','".$_FILES['fileUpload']['name']."')");
+$ins = mysqli_query($conn,"INSERT INTO bill(`uuid`,`title`,`description`,`proposer`,`proposed_date`,`maturity_date`,`file`) VALUES ('$uuid','".$title."','".$desc."','".$proposer."','".$prop_date."','".$mat_date."','".$_FILES['fileUpload']['name']."')");
 if ($ins) {
   echo "Bill Has Been Inserted";
 }else {
   echo 'An error occured: '.mysqli_error($conn);
 }
 }
+}
 
 else {
-  echo "Problem uploading file";
-}
+  echo "Sssafile";
+};
+
+
+
+}else {
+  echo "Nothing";
 };
 
  ?>
