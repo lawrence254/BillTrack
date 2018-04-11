@@ -37,14 +37,15 @@
       ));
   // Search from MySQL database table
   $search=$_POST['search'];
-  $query = $pdo->prepare("SELECT * FROM bill WHERE `description` LIKE '%$search%' OR `proposer` LIKE '%$search%'  LIMIT 0 , 10");
+  $query = $pdo->prepare("SELECT * FROM bill WHERE `description` LIKE '%$search%' OR `proposer` LIKE '%$search%'");
   $query->bindValue(1, "%$search%", PDO::PARAM_STR);
   $query->execute();
   // Display search result
            if (!$query->rowCount() == 0) {
+             $rows = $query->rowCount();
              echo "<div class='table-responsive-xs table-responsive-sm table-responsive-md table-responsive-lg'>";
              echo "<table class='table tableColor table-hover table-bordered'>";
-             echo "<tr><td>Searching For: <span class='searchTerm'>".$search."</span></td></tr>";
+             echo "<tr><td>Searching For: <span class='searchTerm'>".$search." (".$rows." Results)"."</span></td></tr>";
              echo "<tr><td>Brief Bill Description</td><td>Proposed By</td><td>Download</td></tr>";
              while ($results = $query->fetch()) {
                $link = "download.php?filename=".$results['file'];

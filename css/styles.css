@@ -139,12 +139,15 @@ input {
   border-radius: 5px;
   margin-top: 5%;
   margin-bottom: 5%;
+  text-decoration: none;
 }
 
 /* Hover Styling for the Button */
 
 .btn:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Styling for all the individual Cards */
@@ -427,3 +430,9 @@ h2, h4, h1, h3 {
   margin-top: 35px;
   width: 100%;
 }
+
+/*Card Sizing ***DO NOT TOUCH THIS AREA*** */
+.dataCard{
+  margin: 2%;
+}
+/*  */

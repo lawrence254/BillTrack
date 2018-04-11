@@ -65,8 +65,8 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
         <?php while( $record = mysqli_fetch_assoc($resultset) ) {
           $loadID = $record['id'];
     $fileLink = $record['file'];
-    echo "<div class='col-md-4 col-sm-6'>";
-    echo "<div class='card'>";
+    echo "<div class='card-group col-md-4 col-sm-12 col-xs-12'>";
+    echo "<div class='card dataCard'>";
     echo "<img class='card-img-top img-responsive' src='http://beta.iopan.co.uk/articles/images/cards/leading.jpg' alt='Leading'>";
     echo "<div class='card-body'>";
     echo "<h4 class='card-title'>".$record['proposer'];"</h4>";
