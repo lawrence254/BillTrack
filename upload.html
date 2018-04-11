@@ -1,103 +1,65 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <link type="text/css" rel="stylesheet" href="cs/bootstrap.min.css">
-  <link type="text/css" rel="stylesheet" href="cs/style.css">
-  <meta charset="utf-8">
-  <title>upload</title>
+<html><head>
+ <link type="text/css" rel="stylesheet" href="cs/bootstrap.min.css">
+ <link type="text/css" rel="stylesheet" href="cs/style.css">
+ <meta charset="utf-8">
+ <title>upload</title>
 </head>
-
 <body>
-  <div class="topnav">
-  <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
-  <a href="#mainpage" class="active"> Main Page</a>
-    <a href="#search">Search</a>
-  <a href="#archives">Archives</a>
-
-    <a href="#currentBills">Current Bills</a>
+ <div class="topnav">
+ <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
+ <a href="#mainpage" class="active">Main Page</a>
+<a href="#search">Search</a>
+ <a href="#archives">Archives</a>
+ <a href="#currentBills">Current Bills</a>
 </div>
 <div class="container">
-  <div class="center">
-  <h1>Upload</h1>
-  <h2 >Upload A File</h2>
-    <button class="btn btn-info" id="h" >upload a file</button>
+ <form class="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+ <div class="center">
+ <h1>Upload</h1>
+ <h2 >Upload A File</h2>
+   <input type="file" name="fileUpload" value="Select a Bill">
 </div>
-    <P>Enter a Description for the proposed bill<P><br>
-
-      <textarea name="describe" placeholder="Description" class="describe"></textarea>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="">proposer</label>
-      <input type="text"  style="width: 300px; border-radius: 5px">
-    </div>
-
-    <div class="form-group">
-      <label for="">Proposed Date</label>
-      <input type="text"  style="width: 300px; border-radius: 5px">
-    </div>
-
-    <div class="form-group">
-      <label for="">Maturity Date</label>
-      <input type="text" style="width: 300px; border-radius: 5px">
-    </div>
-
-  </div>
+<div class="form-group">
+  <label for="">Title Of The Bill</label>
+  <input type="text" name="title" class="form-control" style="width: 300px; border-radius: 5px">
 </div>
-
-
-
-
-    <button type="submit"  class="upload">Submit</button>
-
-
+<P>Enter a Description for the proposed bill<P><br>
+  <textarea name="describe" name="description" placeholder="Description" class="describe"></textarea><div class="row">
+ <div class="col-md-6">
+   <div class="form-group">
+     <label for="">proposer</label>
+     <input type="text" name="proposer" class="form-control" style="width: 300px; border-radius: 5px">
+   </div>
+   <div class="form-group">
+     <label for="">Proposed Date</label>
+     <input type="date" name="prop_date" class="form-control"  style="width: 300px; border-radius: 5px">
+   </div>
+   <div class="form-group">
+     <label for="">Maturity Date</label>
+     <input type="date" name="mat_date"class="form-control"  style="width: 300px; border-radius: 5px">
+   </div>
+ </div>
 </div>
+<button type="submit" name="button" class="upload">Submit</button>
+ </form></div>
 <footer class="footer-distributed">
-
   <div class="footer-left">
-
-    <img src="img/logoBeta.svg" alt="Company Logo" width="200px" height="100px">
-
-
-    <div class="footer-icons">
-
-      <a href="#"><img src="img/facebook.svg" alt="FaceBook" width="50px" height="50px"></a>
-
+    <img src="img/logoBeta.svg" alt="Company Logo" width="200px" height="100px">    <div class="footer-icons">      <a href="#"><img src="img/facebook.svg" alt="FaceBook" width="50px" height="50px"></a>
       <a href="#"><img src="img/twitter.svg" alt="Twitter" width="50px" height="50px"></a>
-
-      <a href="#"><img src="img/instagram.svg" alt="Instagram" width="50px" height="50px"></a>
-
-
-    </div>
-
+    <a href="#"><img src="img/instagram.svg" alt="Instagram" width="50px" height="50px"></a>
   </div>
-
-
-  <div class="footer-right">
-
-    <p>Contact Us</p>
-
-    <form action="#" method="post">
-
-      <input type="text" name="email" placeholder="Email" />
-
+</div>
+<div class="footer-right">
+  <p>Contact Us</p>
+  <form action="#" method="post">
+    <input type="text" name="email" placeholder="Email" />
       <textarea name="message" placeholder="Message"></textarea>
-
       <button>Send</button>
-
-
     </form>
-
   </div>
-
-
 </footer>
-
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
-
-  </html>
+<script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/scripts.js"></script>
+ </body>
+ </html>

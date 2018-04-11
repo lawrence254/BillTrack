@@ -2,6 +2,13 @@
 if(isset($_FILES['fileUpload'])){
 
 $file = $_FILES['fileUpload'];
+$title = $_POST['title'];
+$proposer = $_POST['proposer'];
+$desc = $_POST['description'];
+$prop_date = $_POST['prop_date'];
+$mat_date = $_POST['mat_date'];
+
+$uuid = uniqid('Bill_',TRUE);
 
 $upload_directory='upload/';
 $ext_str = "doc,docx,txt,pdf";
@@ -30,9 +37,14 @@ if($locate){
   $conn = new mysqli ($host,$user,$pass,$db);
 
 // mysqli_select_db("upload");
-echo"Your File Successfully Uploaded";
+// echo"Your File Successfully Uploaded";
 
-mysqli_query($conn,"INSERT INTO upload VALUES ('".$_FILES['fileUpload']['name']."')");
+$ins = mysqli_query($conn,"INSERT INTO bill(uuid,title,description,proposer,proposed_date,maturity_date,file) VALUES ('$uuid','$title','$desc','$proposer','$prop_date','$mat_date','".$_FILES['fileUpload']['name']."')");
+if ($ins) {
+  echo "Bill Has Been Inserted";
+}else {
+  echo 'An error occured: '.mysqli_error($conn);
+}
 }
 
 else {
