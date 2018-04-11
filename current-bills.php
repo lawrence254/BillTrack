@@ -1,3 +1,13 @@
+<?php
+// include_once("config/db_Connect.php");
+$host = 'localhost';
+$db = 'bills';
+$user = 'team';
+$pass = 't5TQlrN3B39ufxGv';
+$conn = new mysqli ($host,$user,$pass,$db);
+$sql = "SELECT id, description, proposer, proposed_date, maturity_date, file FROM bill LIMIT 3";
+$resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+?>
 <!DOCTYPE html>
 
 <html>
@@ -16,7 +26,7 @@
 
     <script src="js/scripts2.js" charset="utf-8"></script>
 
-    <title>Archives</title>
+    <title>Current Bills</title>
 
   </head>
 
@@ -42,11 +52,11 @@
 
     </div>
 
-    <!-- Search Bar  -->
+     <!-- Search Bar -->
 
     <div class="search">
 
-      <h2 class="text-center" style="padding-bottom:  2%;padding-top:  2%;"><em>Search for a past Bill from our Archives</em></h2>
+      <h2 class="text-center" style="padding-bottom:  2%;padding-top:  2%;"><em>Search for a Current Bill</em></h2>
 
       <input type="text">
 
@@ -54,50 +64,44 @@
 
     </div>
 
-    <h2 class="text-center">Archives</h2>
 
-    <p class="text-center">These are the past Bills in Parliament</p>
+    <h2 class="text-center">Current Bills in Parliament</h2>
+
+    <p class="text-center">These are the ongoing Bills in Parliament</p>
+
+
 
     <!-- Cards -->
 
-    <div class="cards">
+    <div class="container">
 
       <div class="row">
-
-        <div class="col-md-6">
-
-          <a href="#">
-
-            <div class="bill">
-
-              <img src="img/bill-tracker.jpg" alt="Vector1" width="150px" height="150px">
-
-
-              <h2 class="text-center">Construction Bill on eaicoancaoirnco</h2>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae commodo nulla. Ut ut leo sit amet ligula dictum dignissim. Aenean id gravida ipsum. Sed vestibulum in dolor in tempor. Pellentesque dapibus mattis luctus. Vestibulum efficitur
-                turpis quis urna porttitor, quis posuere ante elementum. Nulla vestibulum tortor et fermentum euismod. Aliquam vestibulum quam sed neque placerat consequat.edlks dkwl wlksmwL;DMXSLC SXZKL SXSL;AD,;ASDLCFKAL DV KDLS C;LSCDS;LMCA;DS,S;,D;',
-                dskcl sdx' </p>
-
-              <blockquote class="text-right" style="margin: 5%;">
-
-                <p>Proposal Date:20/2/1999</p>
-
-                <p>Maturity Date: 20/2/2000</p>
-
-                <p>By Member of Parliament</p>
-
-              </blockquote>
-
-            </div>
-
-          </a>
-
-        </div>
-
+        <?php while( $record = mysqli_fetch_assoc($resultset) ) {
+          $loadID = $record['id'];
+    $fileLink = $record['file'];
+    echo "<div class='col-md-4 col-sm-6'>";
+    echo "<div class='card'>";
+    echo "<img class='card-img-top img-responsive' src='http://beta.iopan.co.uk/articles/images/cards/leading.jpg' alt='Leading'>";
+    echo "<div class='card-body'>";
+    echo "<h4 class='card-title'>".$record['proposer'];"</h4>";
+    echo "<h6 class='card-text'>".$record['description'];"</h6>";
+    // echo "<p class='card-text'>".$record['proposed_date'];"</p>";
+    $link = "download.php?filename=".$fileLink;
+    $linked = "billname.php?id=".$loadID;
+    echo "</div>";
+    echo "<div class='card-footer text-muted'>Proposed on: ".$record['proposed_date'];
+    echo "<br><a class='btn btn-primary'href='".$linked."'>View Bill</a>";
+    echo "<a class='btn btn-success downloadBtn'href='".$link."'>Download The Bill</a>";
+    echo "  </div>";
+    echo "</div>";
+    echo "</div>";
+    ?>
+    <?php } ?>
       </div>
 
     </div>
+
+
 
     <!-- Footer Section -->
 
@@ -116,9 +120,11 @@
 
           <a href="#"><img src="img/instagram.svg" alt="Instagram" width="50px" height="50px"></a>
 
+
         </div>
 
       </div>
+
 
       <div class="footer-right">
 
@@ -131,6 +137,7 @@
           <textarea name="message" placeholder="Message"></textarea>
 
           <button>Send</button>
+
 
         </form>
 
