@@ -59,9 +59,6 @@
 
 .container-fluid {
   background-image: url('../img/Parliament 3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 700px;
   margin: 0px;
   text-align: center;
@@ -70,7 +67,7 @@
   padding-bottom: 10px;
   font-size: 50px;
 }
-/* Styling for The about us Section */
+
 #us {
   background-color: #c6cecd;
   margin: 0;
@@ -78,12 +75,12 @@
   height: 250px;
   text-align: center;
 }
-/* Styling for the Search Sectionr */
+
 #search {
   background-color: #d2dcdd;
   padding: -2;
   margin: 0;
-  height: auto;
+  height: 250px;
   text-align: center;
 }
 
@@ -93,16 +90,10 @@
   margin-bottom: 5%;
   color: white;
 }
-#button:hover{
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background-color: #1a70ad;
-}
+
 input {
   border-radius: 20px;
   width: 200px;
-  border: 0;
-  height: 30px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*Styling for The a Tag*/
@@ -350,41 +341,56 @@ footer.footer-distributed {
     float: none;
   }
 }
-
-/*//css for billname.html//*/
-
-body {
-  background-color: #d2dcdd;
+/* upload */
+textarea{
+  height: 500px;
+  width: 700px;
+  margin-left: 0%;
+  border-radius: 20px;
+  border: 0;
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
 }
-
-.card {
+textarea:hover{
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 16px;
-  border-radius: 5px;
+}
+label{
+  text-align:left;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #1a70ad;
+  width: 150px;
+  margin-right: 5px;
+  padding: 4px;
+  float: left;
+}
+input{
+  align-items: right;
+  padding: 5px;
+
+}
+/* /.box{
+  width: 320px;
+     padding: 10px;
+     border:0;
+     margin: 0;
+     background-color:  #1a70ad;
+} */
+.upload{
+  background-color:  #1a70ad;
+  text-align: center;
+  border-radius: 10px;
+  padding: 6px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+#h{
+background-color:  #1a70ad;
+}
+.center{
   text-align: center;
 }
 
-.card img {
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card h4 {
-  text-align: left;
-}
-
-.card p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-p {
-  font-family: 'Cormorant Garamond', serif;
-}
-h2, h4, h1, h3{
-  font-family: 'Crimson Text', serif;
+body{
+  background-color:#d2dcdd
 }
