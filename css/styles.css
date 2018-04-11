@@ -388,3 +388,20 @@ p {
 h2, h4, h1, h3{
   font-family: 'Crimson Text', serif;
 }
+
+/* Styling for saerch results table */
+#searchForm{
+  margin-top: 2%;
+}
+.tableColor{
+  background: #224969;
+  color: #fff;
+}
+.searchTerm{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.sForm{
+  margin-left: 20%;
+}

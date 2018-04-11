@@ -5,7 +5,7 @@ $db = 'bills';
 $user = 'team';
 $pass = 't5TQlrN3B39ufxGv';
 $conn = new mysqli ($host,$user,$pass,$db);
-$sql = "SELECT id, description, proposer, proposed_date, maturity_date, file FROM bill LIMIT 3";
+$sql = "SELECT id, description, proposer, proposed_date, maturity_date, file FROM bill";
 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 ?>
 <!DOCTYPE html>
