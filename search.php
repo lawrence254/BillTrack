@@ -2,6 +2,7 @@
 
 <head>
   <title> Search | Bills </title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
@@ -11,7 +12,7 @@
   <div class="topnav">
     <!-- <ul> -->
     <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
-    <a href="index.php" class="active"> Main Page</a>
+    <a href="index.php"> Main Page</a>
     <a href="current_bills.php">Current Bills</a>
     <a href="archives.php">Archives</a>
     <a href="#">Search</a>

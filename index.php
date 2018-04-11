@@ -11,6 +11,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="css/styles.css">
   <meta charset="utf-8">
@@ -20,7 +21,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
   <div class="topnav">
     <!-- <ul> -->
     <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
-    <a href="#" class="active"> Main Page</a>
+    <a href="#"> Main Page</a>
     <a href="current_bills.php">Current Bills</a>
     <a href="archives.php">Archives</a>
     <a href="search.php">Search</a>

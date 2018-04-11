@@ -15,6 +15,7 @@ $fileLink = $billDetails['file'];
 <html>
 
 <head>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="css/styles.css">
   <meta charset="utf-8">
@@ -24,7 +25,7 @@ $fileLink = $billDetails['file'];
 <body>
   <div class="topnav">
     <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
-    <a href="index.php" class="active"> Main Page</a>
+    <a href="index.php"> Main Page</a>
     <a href="current_bills.php">Current Bills</a>
     <a href="archives.php">Archives</a>
     <a href="search.php">Search</a>
