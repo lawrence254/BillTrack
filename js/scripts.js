@@ -1,8 +1,6 @@
 // <<<<<<< HEAD
-// //function for media query of topnav to work//
+// //funtion for media query of topnav to work//
 // =======
-// >>>>>>> 52fcb30660c5f7b889efad8bdcfc84d83bbfb666
-
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
