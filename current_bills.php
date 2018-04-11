@@ -38,13 +38,13 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
 
       <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
 
-      <a href="#mainpage" class="active"> Main Page</a>
+      <a href="index.php" class="active"> Main Page</a>
 
-      <a href="#currentBills">Current Bills</a>
+      <a href="#">Current Bills</a>
 
-      <a href="#archives">Archives</a>
+      <a href="archives.php">Archives</a>
 
-      <a href="#search">Search</a>
+      <a href="search.php">Search</a>
 
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 

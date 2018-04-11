@@ -18,16 +18,16 @@ $fileLink = $billDetails['file'];
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="css/styles.css">
   <meta charset="utf-8">
-  <title></title>
+  <title>Bill Details</title>
 </head>
 
 <body>
   <div class="topnav">
     <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
-    <a href="#mainpage" class="active"> Main Page</a>
-    <a href="#currentBills">Current Bills</a>
-    <a href="#archives">Archives</a>
-    <a href="#search">Search</a>
+    <a href="index.php" class="active"> Main Page</a>
+    <a href="current_bills.php">Current Bills</a>
+    <a href="archives.php">Archives</a>
+    <a href="search.php">Search</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
   </div>

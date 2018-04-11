@@ -8,6 +8,15 @@
 </head>
 
 <body>
+  <div class="topnav">
+    <!-- <ul> -->
+    <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
+    <a href="index.php" class="active"> Main Page</a>
+    <a href="current_bills.php">Current Bills</a>
+    <a href="archives.php">Archives</a>
+    <a href="#">Search</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
   <div class="container-flex">
     <div class="sForm">
       <form action="search.php" id="searchForm" method="post">

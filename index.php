@@ -14,16 +14,16 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="css/styles.css">
   <meta charset="utf-8">
-  <title>bill tracking</title>
+  <title>Welcome </title>
 </head>
 <body>
   <div class="topnav">
     <!-- <ul> -->
     <img src="img/logoBeta.svg" alt="bill tacker logo" style="width: 100px; height: 50px;">
-    <a href="#mainpage" class="active"> Main Page</a>
-    <a href="#currentBills">Current Bills</a>
-    <a href="#archives">Archives</a>
-    <a href="#search">Search</a>
+    <a href="#" class="active"> Main Page</a>
+    <a href="current_bills.php">Current Bills</a>
+    <a href="archives.php">Archives</a>
+    <a href="search.php">Search</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
   <div class="container-fluid">
@@ -35,11 +35,6 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
   <div id="us">
     <h1>About Us</h1>
     <p>iuytfghjklkjhgfghjk</p>
-  </div>
-  <div id="search">
-    <h2 style="padding-bottom:  2%;padding-top:  2%;">Search For A Current Bill</h2>
-    <input type="text" class=""><br>
-    <button class="btn btn-info" id="button">Search</button>
   </div>
   <div class="cards">
     <h2 class="text-center">Recent Bills Proposed in Parliament :</h2>
@@ -62,14 +57,14 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     echo "</div>";
     echo "<div class='card-footer text-muted'>Proposed on: ".$record['proposed_date'];
     // echo "<a class='btn btn-info'href='".$link."'>View Bill</a>";
-     echo "<a class='btn btn-success'href='".$linked."'>View Bill</a>";
+     echo "<a class='btn btn-success cardButton'href='".$linked."'>View Bill</a>";
     echo "  </div>";
     echo "</div>";
     echo "</div>";
     ?>
     <?php } ?>
     </div>
-    <button type="View" class="btn">View More</button>
+    <a href="current_bills.php" class="btn">View More</a>
   </div>
   <footer class="footer-distributed">
     <div class="footer-left">

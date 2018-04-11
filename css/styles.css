@@ -70,7 +70,9 @@
   padding-bottom: 10px;
   font-size: 50px;
 }
+
 /* Styling for The about us Section */
+
 #us {
   background-color: #c6cecd;
   margin: 0;
@@ -78,7 +80,9 @@
   height: 250px;
   text-align: center;
 }
+
 /* Styling for the Search Sectionr */
+
 #search {
   background-color: #d2dcdd;
   padding: -2;
@@ -93,10 +97,12 @@
   margin-bottom: 5%;
   color: white;
 }
-#button:hover{
+
+#button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   background-color: #1a70ad;
 }
+
 input {
   border-radius: 20px;
   width: 200px;
@@ -382,26 +388,42 @@ body {
   text-align: justify;
   text-justify: inter-word;
 }
+
 p {
   font-family: 'Cormorant Garamond', serif;
 }
-h2, h4, h1, h3{
+
+h2, h4, h1, h3 {
   font-family: 'Crimson Text', serif;
 }
 
 /* Styling for saerch results table */
-#searchForm{
+
+#searchForm {
   margin-top: 2%;
 }
-.tableColor{
+
+.tableColor {
   background: #224969;
   color: #fff;
 }
-.searchTerm{
+
+.searchTerm {
   font-weight: bold;
   text-transform: uppercase;
   font-style: italic;
 }
-.sForm{
+
+.sForm {
   margin-left: 20%;
+}
+
+/* Button Styling */
+
+.cardButton {
+  font-size: 0.875em;
+  display: block;
+  left: -60px;
+  margin-top: 35px;
+  width: 100%;
 }
