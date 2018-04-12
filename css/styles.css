@@ -446,20 +446,3 @@ h2, h4, h1, h3 {
 .dataCard{
   margin: 2%;
 }
-/* Media Queried for Cards */
-@media screen and (max-width: 360px){
-  .col-lg-4{
-    display: none;
-  }
-  .col-md-4{
-    display: none;
-    ]
-}
-@media screen and (min-width: 1024px){
-  .col-xs-12{
-    display: none;
-  }
-  .col-sm-12{
-    display: none;
-  }
-}
