@@ -315,3 +315,9 @@ p {
 h2, h4, h1{
   font-family: 'Crimson Text', serif;
 }
+
+/*Card Sizing ***DO NOT TOUCH THIS AREA*** */
+.dataCard{
+  margin: 2%;
+}
+/*  */
