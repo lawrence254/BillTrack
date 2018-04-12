@@ -71,10 +71,11 @@ The application currently doesn't have any bugs. If any are spotted you can open
 8. Track how fast critical bills take to mature compared to other bills.
 
 ## Contact details
-You can contact us at 1.lawrenslava1[at]gmail[dot]com
-                      2.gracekashe[at]gmail[dot]com
-                      3.davidlutta2010[at]gmail[dot]com
-                      4.marywendy74[at]gmail[dot]com
+You can contact us at
+1. lawrenslava1[at]gmail[dot]com
+2. gracekashe[at]gmail[dot]com
+3. davidlutta2010[at]gmail[dot]com
+4. marywendy74[at]gmail[dot]com
 
 
 ## License
