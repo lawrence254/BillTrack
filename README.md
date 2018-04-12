@@ -81,4 +81,8 @@ You can contact us at
 ## License
 [License](https://github.com/lawrence254/BillTrack/blob/master/LICENSE)
 
-License MIT Copyright (c) 2018 LAWRENCE KARANJA, DAVID LUTTA, WENDY MARY , GRACE MARION
+License MIT Copyright (c) 2018
+1. LAWRENCE KARANJA
+2. DAVID LUTTA
+3. WENDY MARY
+4. GRACE MARION

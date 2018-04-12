@@ -57,18 +57,29 @@
   }
 }
 
-.container-fluid {
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+
+.cover {
   background-image: url('../img/Parliament 3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 700px;
-  margin: 0px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   text-align: center;
   color: #FFFFFF;
+
+  font-size: 50px;
+}
+.coverText{
+
   padding-top: 300px;
   padding-bottom: 10px;
-  font-size: 50px;
+
 }
 
 /* Styling for The about us Section */
@@ -435,4 +446,3 @@ h2, h4, h1, h3 {
 .dataCard{
   margin: 2%;
 }
-/*  */

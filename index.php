@@ -28,11 +28,15 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
   <div class="container-fluid">
-    <img src="img/logoBeta.svg" alt="bill tacker logo" style="height: 100px; width:200px;">
-    <h2>Track Parliament Bills</h2>
-    <h4>Track every process</h4>
-    <img src="img/Progress Bar.png" alt="progress bar" style="width:700px;">
-  </div>
+    <div class="cover">
+      <div class="coverText">
+        <img src="img/logoBeta.svg" alt="bill tacker logo" style="height: 100px; width:200px;">
+        <h2>Track Parliament Bills</h2>
+        <h4>Track every process</h4>
+        <img src="img/Progress Bar.png" alt="progress bar" style="width:700px;">
+      </div>
+    </div>
+    </div>
   <div id="us">
     <h1>About Us</h1>
     <p>We are a group of interested persons in the law making process.<br>We have created this site to enable all citizens to be able to follow the law making process of the parliament.<br>
@@ -43,13 +47,14 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     <h2 class="text-center">Recent Bills Proposed in Parliament :</h2>
     <br>
       <div class="row">
+        <div class="col-md-4">
         <?php while( $record = mysqli_fetch_assoc($resultset) ) {
           $loadID = $record['id'];
 
     $fileLink = $record['file'];
-    echo "<div class='col-md-4 col-sm-6 card-group'>";
-    echo "<div class='card dataCard'>";
-    echo "<img class='card-img-top img-responsive' src='http://beta.iopan.co.uk/articles/images/cards/leading.jpg' alt='Leading'>";
+    echo "<div class='card-group' id='card-size'>";
+    echo "<div class='card'>";
+    echo "<img class='card-img-top img-responsive' src='img/bill-tracker.jpg' alt='Leading'>";
     echo "<div class='card-body'>";
     echo "<h4 class='card-title'>".$record['proposer'];"</h4>";
     echo "<p class='card-text'>".$record['description'];"</p>";
@@ -66,6 +71,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     echo "</div>";
     ?>
     <?php } ?>
+  </div>
     </div>
     <a href="current_bills.php" class="btn">View More</a>
   </div>
