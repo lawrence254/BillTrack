@@ -47,13 +47,12 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     <h2 class="text-center">Recent Bills Proposed in Parliament :</h2>
     <br>
       <div class="row">
-        <div class="col-md-4">
         <?php while( $record = mysqli_fetch_assoc($resultset) ) {
           $loadID = $record['id'];
 
     $fileLink = $record['file'];
-    echo "<div class='card-group' id='card-size'>";
-    echo "<div class='card'>";
+    echo "<div class='.col-sm-12 ' id='card-size'>";
+    echo "<div class='card .col-md-4'>";
     echo "<img class='card-img-top img-responsive' src='img/bill-tracker.jpg' alt='Leading'>";
     echo "<div class='card-body'>";
     echo "<h4 class='card-title'>".$record['proposer'];"</h4>";
