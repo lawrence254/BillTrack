@@ -39,7 +39,9 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
     </div>
   <div id="us">
     <h1>About Us</h1>
-    <p>iuytfghjklkjhgfghjk</p>
+    <p>We are a group of interested persons in the law making process.<br>We have created this site to enable all citizens to be able to follow the law making process of the parliament.<br>
+    This would be achived by providing a platform that allows all citizens to view and track all the stages of the bill as it goes through the parliament.<br>
+  It helps citizens to have a say in legislation that affects them.</p>
   </div>
   <div class="cards">
     <h2 class="text-center">Recent Bills Proposed in Parliament :</h2>
