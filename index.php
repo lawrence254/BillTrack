@@ -51,7 +51,7 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
           $loadID = $record['id'];
 
     $fileLink = $record['file'];
-    echo "<div class='card-group col-md-4  id = 'card-size'>";
+    echo "<div class='card-group col-4 col-sm-12 ' id = 'card-size'>";
     echo "<div class='card dataCard'>";
     echo "<img class='card-img-top img-responsive' src='img/bill-tracker.jpg' alt='Leading'>";
     echo "<div class='card-body'>";
